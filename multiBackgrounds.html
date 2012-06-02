@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Henny+Penny|Londrina+Sketch|Jolly+Lodger|Luckiest+Guy' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/visualPatterns.css">
+		<style>
+			body	{background-image: url(images/realZilla.png), url(images/kong.png), url(images/b17Real.png), url(images/b17Real.png), url(images/cityReal.jpg) ;
+			background-position: right bottom, left bottom, top right, 70% 10%, center;
+			background-repeat: no-repeat;
+			background-size:40%, 25%, 20%, 10%, cover;}
+			h2	{font-size:36px; display:inline; padding:0 90px; color:rgba(255,255,255,.75); text-align: center;}
+			.multiBack	{background-image: url(images/starsR.png), url(images/starsL.png);
+						background-repeat: no-repeat;
+						background-position: right bottom, left bottom;
+						background-size:84px auto, 84px auto;}
+			
+			@media all and (max-width: 720px) {
+				h2 {font-size:1.2em; padding:0 2.4em;}
+				.multiBack {background-size:auto 1.2em, auto 1.2em;}
+			}
+			@media all and (max-width: 520px) {
+				h2 {font-size:1em; padding:0;}
+				.multiBack	{background-image:none;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="presiNav transition">
+			<img src="images/menu.svg" />
+			<ul class="menu transition">
+								<li><a href="index.html" class="">Index</a></li>
+				<li><a href="slides.html" class="">Slide Start</a></li>
+				<li><a href="slidesModular.html" class="">Modular Slides</a></li>
+				<li><a href="slidesCss3.html" class="">CSS3 Slides</a></li>
+			</ul>
+		</div>		
+		<div class="pageWrapper">
+			<nav>
+				<a href="layersAlpha.html">
+					<img src="images/next.svg" />
+				</a>
+			</nav>
+			<div class="contentWrapper">
+				<div class="mainContent inner jolly">
+					<h2 class="multiBack">CSS3 Multiple Backgrounds</h2>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

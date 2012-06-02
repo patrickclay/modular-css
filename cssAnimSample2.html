@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Henny+Penny|Londrina+Sketch|Jolly+Lodger|Luckiest+Guy' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/visualPatterns.css">
+		<style>
+		.cB	{z-index:10;}
+		.photoDeck	{position:relative; height:200px;}
+		.photoDeck img	{padding:10px; z-index:100; background-color:#fff; width:200px; position:absolute; top:0; left:0;}
+		.photoDeck:hover .one	{top:0; left:0; width:400px;}
+		.photoDeck:hover .two	{top:0; left:460px; width:400px;}
+		.photoDeck:hover .three	{top:260px; left:40px; width:400px;}
+		</style>
+	</head>
+	<body>
+		<div class="presiNav transition">
+			<img src="images/menu.svg" />
+			<ul class="menu transition">
+								<li><a href="index.html" class="">Index</a></li>
+				<li><a href="slides.html" class="">Slide Start</a></li>
+				<li><a href="slidesModular.html" class="">Modular Slides</a></li>
+				<li><a href="slidesCss3.html" class="">CSS3 Slides</a></li>
+			</ul>
+		</div>
+		<div class="pageWrapper">
+			<header>
+
+				<div class="inner">
+					<h1>CSS3 Photo Deck</h1>
+					
+				</div>
+			</header>
+			<div class="contentWrapper clearfix">
+				<div class="mainContent inner">
+					<div class="">
+						<div class="photoDeck">
+							<img src="images/vette1.jpg" alt="vet" class="one bordered shadowed transition" />
+							<img src="images/vette2.jpg" alt="vet" class="two bordered shadowed transition negRotated" />
+							<img src="images/vette3.jpg" alt="vet" class="three bordered shadowed transition rotated" />
+						</div>
+						<p>psst... it's for sale.</p>
+					</div>
+					<!-- our lovely modular component -->
+					<div class="cB">
+						<div class="inner bordered">
+<xmp>
+.cB	{z-index:10;}
+.photoDeck	{position:relative; height:200px;}
+.photoDeck img	{padding:10px; z-index:100; background-color:#fff; width:200px; position:absolute; top:0; left:0;}
+.photoDeck:hover .one	{top:0; left:0; width:400px;}
+.photoDeck:hover .two	{top:0; left:460px; width:400px;}
+.photoDeck:hover .three	{top:260px; left:40px; width:400px;}
+</xmp>							
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+					
+				</div>
+			</div>
+			<footer>
+				<div class="inner">
+					<p>For real - 1974, clean...</p>
+					<p>@patrickclay</p>
+					<p><a href="http://pboggs2006.tumblr.com">pboggs2006.tumblr.com</a><p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

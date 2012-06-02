@@ -1,0 +1,309 @@
+/* Visual Patterns CSS */
+/* Pat modified Yahoos reset.css - kills browser defaults like zombies. Very handy */
+* {margin:0;padding:0;} /* controversial these days */
+fieldset,img{border:0;}
+address,caption,em,strong,th{font-style:normal;font-weight:bold;}
+li{list-style:none;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+em {font-style:italic;}
+blockquote,ul,ol,dl {margin:1em;}
+ol,ul,dl {margin-left:1em;}
+ol li {list-style:decimal outside;}
+ul li	{list-style:disc outside;}
+li	{margin:.5em inherit;}
+th,td {border:1px solid #333; padding:.5em; border-collapse:collapse;}
+th {text-align:center;}
+caption {margin-bottom:.5em; text-align:center;}
+strong    {font-weight:bold;}
+label    {font-weight:bold;}
+/* end reset css */
+/* ####################################################### */
+
+/* Style guide / buildup */
+/* begin tag level CSS */
+html	{height:100%;}
+body {font-family:Arial,Helvetica,sans-serif; font-size:150%; height:100%;}
+h1 {font-size:2.6em; margin:0;}
+h2 {font-size:1.4em; margin:.25em 0;}
+h3 {font-size:1.2em; margin:.25em 0;}
+h4 {font-size:1em; margin:.5em 0;}
+h5 {font-size:1em; margin:.5em 0 0;}
+p, td, th, li    {font-size:80%;}
+td p, td li	{font-size:100%;}
+p	{margin:6px 0;}
+a {color:#369;}
+a:visited {color:#333;}
+table	{width:98%; border-collapse:collapse; border:1px solid #333; border-spacing:0;}
+
+/* ####################################################### */
+/* Structural elements */
+.pageWrapper	{height:94%; border-top:1px solid #333; width:90%; margin:0 auto; position:relative;}
+nav	{position:absolute; right:-30px; top:0;}
+nav img	{width:30px;} /* used for presentation */
+
+.presiNav	{position:absolute; overflow:visible; width:160px; height:60px; top:0; left:0; z-index:900;}
+.presiNav img	{width:30px;}
+.presiNav .menu	{margin:0; position:absolute; background-color:rgba(0,0,0,.75); color:#fff; opacity:0; font-size:.75em; padding:6px;}
+.presiNav:hover .menu	{opacity:1;}
+.menu li, .menu a	{color:#fff; margin:5px 0;}	
+
+.contentWrapper	{clear:both;}
+.footer, footer	{margin-top:1em; padding:.25em 0; border-top: 1px solid rgba(0,0,0,.25); clear:both;}
+/* ####################################################### */
+/* modular elements */
+
+.cB	{margin:.5em 0; z-index:1001; position:relative;}
+.inner	{margin:12px;} /* used to do floated layouts and have "padding" applied to inner box */
+.cB .inner	{padding:8px; min-height:170px;}
+/* miniature grid system for double boxes */
+.halfBox	{width:50%; float:left;}
+.thirdBox	{width:33.3%; float:left;}
+.twoThirdBox	{width:66.6%; float:left;}
+
+/* LOCATION BASED modifiers for content box - cB */
+.splitFifty .cB	{width:47%; float:left; min-height:200px;}
+.splitFifty .inner 	{min-height:200px;}
+.splitFifty .cB:nth-child(even)	{clear:left;}
+
+.splitThirty .cB	{width:67%; float:left;}
+.splitThirty .inner 	{min-height:200px;}
+.splitThirty .cB:nth-child(even)	{clear:left; width:29%;}
+
+/* ####################################################### */
+
+/* global modifiers - started with examples from css3please.com */
+.featured	{background-color:rgba(0,0,0,.75); color:#fff;}
+.bordered	{border:1px solid #333;}
+
+.rounded	{-webkit-border-radius: 12px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+          border-radius: 12px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;}
+
+.halfR	{-webkit-border-radius:0 0 12px 12px; border-radius:0 0 12px 12px; }
+
+.gradient	{
+  	background: #ffffff; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top, #C8E1F7 0%, #ffffff 71%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C8E1F7), color-stop(71%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #C8E1F7 0%,#ffffff 71%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #C8E1F7 0%,#ffffff 71%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #C8E1F7 0%,#ffffff 71%); /* IE10+ */
+	background: linear-gradient(top, #C8E1F7 0%,#ffffff 71%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C8E1F7', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+	 background-attachment:fixed;
+}
+
+.radial {  
+   	background-color:#f5f50c;
+	background-image: -moz-radial-gradient(15% 35%, ellipse farthest-corner, #f5f50c, #ff8519 33%);
+	background-image: -webkit-radial-gradient(15% 35%, ellipse farthest-corner, #f5f50c, #ff8519 33%);
+	background-image: -o-radial-gradient(15% 35%, ellipse farthest-corner, #f5f50c, #ff8519 33%);
+	background-image: -ms-radial-gradient(15% 35%, ellipse farthest-corner, #f5f50c, #ff8519 33%);
+	background-image: radial-gradient(15% 35%, ellipse farthest-corner, #f5f50c, #ff8519 33%);
+	 background-attachment:fixed;
+	}
+
+.shadowed	{-webkit-box-shadow: 0 0 4px 0 #333; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+          box-shadow: 0 0 4px 0 #333; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */}
+.innerShadowed	{-moz-box-shadow:    inset 0 0 10px #333;
+		   -webkit-box-shadow: inset 0 0 10px #333;
+		   box-shadow:         inset 0 0 10px #333;}
+		
+.transparent	{background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.75) !important;  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99B4B490,endColorstr=#99B4B490); /* IE6–IE9 */
+            zoom: 1;}
+
+.transparent.gradient	{
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,.8))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.8) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.8) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.8) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.8) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+}
+
+.rotated	{-webkit-transform: rotate(1.5deg);  /* Saf3.1+, Chrome */
+			     -moz-transform: rotate(1.5deg);  /* FF3.5+ */
+			      -ms-transform: rotate(1.5deg);  /* IE9 */
+			       -o-transform: rotate(1.5deg);  /* Opera 10.5 */
+			          transform: rotate(1.5deg);
+			             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+			                     M11=0.9996573249755573, M12=-0.02617694830787315, M21=0.02617694830787315, M22=0.9996573249755573, sizingMethod='auto expand');
+			               zoom: 1;}
+.negRotated	{ -webkit-transform: rotate(-2.5deg); 
+						     -moz-transform: rotate(-2.5deg); 
+						      -ms-transform: rotate(-2.5deg); 
+						       -o-transform: rotate(-2.5deg); 
+						          transform: rotate(-2.5deg);
+						             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
+						                     M11=0.9990482215818578, M12=0.043619387365336, M21=-0.043619387365336, M22=0.9990482215818578, sizingMethod='auto expand');
+						               zoom: 1;}
+.shadowedHeader .hThree	{text-shadow: 1px 1px 3px #888; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */}
+
+.tiled	{background:url(../images/tiles.jpg) repeat; height:auto;} /* height auto - tiled bg images and %height makes your browser fart */
+.smokeout	{background-image:url(../images/smokeBack.png); background-repeat: no-repeat; background-size: cover;}
+.black {color:black !important;}
+
+/* CSS coolness stuff */
+.godzilla	{text-indent:-9000em; z-index:1000; position:absolute; bottom:0; left:-100px; width:550px; height:450px; background-image:url(../images/godzilla.png); background-repeat: no-repeat; background-size: contain;}
+.city	{text-indent:-9000em; z-index:100; position:absolute; bottom:0; left:0; width:100%; height:350px; background-image:url(../images/city.png); background-repeat: no-repeat; background-size: cover;}
+.bomber	{text-indent:-9000em; z-index:100; position:absolute; top:0; left:80%; width:200px; height:200px; background-image:url(../images/b17.png); background-repeat: no-repeat; background-size: contain;}
+.smaller	{width:100px; height:100px; left:60%;}
+.risingSun	{z-index:10; top:0; left:0; width:99%; height:99%; background-image:url(../images/risingSun.png); background-repeat: no-repeat; background-size: cover;}
+.cloud	{background-image:url(../images/clouds.png); background-size:cover;}
+.ocean	{background-image:url(../images/ocean.png); background-size:cover;}
+.whale	{background-image:url(../images/whale.png); background-size:auto 130px; background-position:0 78px; background-repeat:no-repeat;}
+
+.reverseMe {
+  -webkit-perspective: 300;  /* Saf4+, Chrome 12+ */
+     -moz-perspective: 300;  /* FF10+ */
+      -ms-perspective: 300;  /* IE10+ */
+          perspective: 300;
+  -webkit-transform: rotateY(180deg);  -webkit-transform-style: preserve-3d;
+     -moz-transform: rotateY(180deg);     -moz-transform-style: preserve-3d;
+      -ms-transform: rotateY(180deg);      -ms-transform-style: preserve-3d;
+          transform: rotateY(180deg);          transform-style: preserve-3d;
+}
+/* godzilla specific reverse rule shame on me */
+.godzilla.reverseMe	{left:70%;}
+
+/* stylistic changes to page level elements */
+.risingSun h1	{margin-bottom:.25em;}
+
+/* crazy fonts */
+.henny h1, .henny h2, .henny h3 {font-family: 'Henny Penny', cursive;}
+.londrina h1, .londrina h2, .londrina h3 {font-family: 'Londrina Sketch', cursive;}
+.jolly h1, .jolly h2, .jolly h3 {font-family: 'Jolly Lodger', cursive;}
+.lucky h1, .lucky h2, .lucky h3 {font-family: 'Luckiest Guy', cursive;}
+.oxygen h1, .oxygen h2, .oxygen h3, .oxygen h4	{font-family: 'Oxygen', sans-serif;}
+
+/* svg */
+.clouds	{width:200px;}
+.clouds:hover	{width:1000px;}
+
+
+/* ####################################################### */
+/* RGBa Section */
+.alpha {background-color:#456789;}
+.alpha header	{margin-bottom:1px; position:relative; background-color:rgba(255,255,255,.15); color:rgba(255,255,255,.7);}
+.alpha footer	{margin-top:0; background-color:rgba(255,255,255,.15); color:#fff;}
+.alpha	{color:rgba(0,0,0,.4);}
+.alpha .nav	{position:absolute; bottom:-40px; z-index:10;}
+.alpha .inner	{padding:12px; margin:0 12px;}
+.alpha .transparent	{background-color: rgba(255, 255, 255, 0.4) !important;}
+
+.grass	{background-image:-moz-linear-gradient(top,  rgba(255,255,255,.5) 0%, rgba(255,255,255,0) 100%), url(../images/grass.png); /* FF3.6+ */
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.5)), color-stop(100%,rgba(255,255,255,0))), url(../images/grass.png) ; /* Chrome,Safari4+ */
+	background-image:-webkit-linear-gradient(top,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%), url(../images/grass.png) ; /* Chrome10+,Safari5.1+ */
+	background-image:-o-linear-gradient(top,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%), url(../images/grass.png); /* Opera 11.10+ */
+	background-image:-ms-linear-gradient(top,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%), url(../images/grass.png); /* IE10+ */
+	background-image:linear-gradient(top,  rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 100%), url(../images/grass.png); /* W3C */
+	background-repeat:no-repeat;
+	background-position:bottom right;}
+	
+.striped		{background-image:-moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,.75) 100%), url(../images/stripe2.png); /* FF3.6+ */
+		background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,.75))), url(../images/stripe2.png) ; /* Chrome,Safari4+ */
+		background-image:-webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.75) 100%), url(../images/stripe2.png) ; /* Chrome10+,Safari5.1+ */
+		background-image:-o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.75) 100%), url(../images/stripe2.png); /* Opera 11.10+ */
+		background-image:-ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.75) 100%), url(../images/stripe2.png); /* IE10+ */
+		background-image:linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,.75) 100%), url(../images/stripe2.png); /* W3C */
+		background-repeat:no-repeat, repeat;}
+/* ####################################################### */
+/* fancy form elements */
+select {border:1px solid #333;}
+input[type="checkbox"], 
+input[type="radio"]	{margin-right:5px;}
+fieldset    {margin:1em 0; border:0;}
+fieldset label	{display:block; color:rgba(0,0,0,.7);}
+label	{font-weight:bold; text-shadow: 1px 1px 2px #ccc; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */}
+input	{padding:.2em; border:1px solid #e3e3e3;
+	  	background: #ffffff; /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+		background: -moz-linear-gradient(top, #cccccc 0%, #ffffff 15%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(15%,#ffffff)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #cccccc 0%,#ffffff 15%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #cccccc 0%,#ffffff 15%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #cccccc 0%,#ffffff 15%); /* IE10+ */
+		background: linear-gradient(top, #cccccc 0%,#ffffff 15%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+		-webkit-border-radius: 4px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+		          border-radius: 4px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+		  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; /* useful if you don't want a bg color from leaking outside the border: */
+			-webkit-transition: all 0.5s ease-in-out;
+		    -moz-transition: all 0.5s ease-in-out;
+		    -o-transition: all 0.5s ease-in-out;
+		    -ms-transition: all 0.5s ease-in-out;    
+		    transition: all 0.5s ease-in-out;
+	}
+input[type="submit"]	{padding:.25em .5em; text-shadow: 1px 1px 2px #ccc;}
+input:focus	{-webkit-box-shadow: 0  0  8px 2px #7dc8f0; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+          box-shadow: 0  0  8px 2px #7dc8f0; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */}
+
+/* ####################################################### */
+/* CSS animations samples */
+.sampleTrans	{background-color:#333; width:200px; color:#fff; padding:10px;}
+.sampleTrans:hover	{background-color:#e2e2e2; color:#333; width:400px; 
+			-moz-box-shadow:    inset 0 0 10px #7dc8f0;
+		   -webkit-box-shadow: inset 0 0 10px #7dc8f0;
+		   box-shadow:         inset 0 0 10px #7dc8f0;}
+.sampleTrans2	{position:relative; overflow:hidden; width:250px; height:100px;}
+.sampleTrans2 .toolT	{position:absolute; left:100px; top:-4px; font-size:.75em; padding:6px; background-color:#fff; color:#fff;}
+.sampleTrans2:hover .toolT	{background-color:#333;}
+
+.map	{width:100px;}
+.map:hover	{width:400px;}
+
+.photo img	{width:120px; padding:5px 5px 20px 5px; background-color:#fff;}
+.photo img:hover	{-webkit-transform: rotate(-20deg) scale(2);
+    -moz-transform: rotate(-20deg) scale(2);
+    -o-transform: rotate(-20deg) scale(2);
+    -ms-transform: rotate(-20deg) scale(2);
+	}
+
+.imgContainer	{position:relative; height:180px;}
+.imgContainer img	{height:180px; position:absolute; top:0; left:0;}
+.imgContainer .zilla	{opacity:1; background-color:#fff;}
+.imgContainer .zilla:hover	{opacity:0;}
+
+/* Utility classes */
+.hidden	{display:none;} /* bad semantics shame on me */
+.inlineList	li {display:inline;}
+.floatL	{float:left;}
+.floatR	{float:right;}
+.textC	{text-align:center;}
+.clear 	{clear:both;}
+.absolute	{position:absolute;}
+.noMargin	{margin:0; padding:0;}
+.transition	{-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;    
+transition: all 0.5s ease-in-out;}
+
+.textBox {width:200px; overflow:hidden;}
+
+/* ####################################################### */
+/* clearfix updated */
+	/* For modern browsers */
+	.clearfix:before,
+	.clearfix:after {
+	    content:"";
+	    display:table;
+	}
+
+	.clearfix:after {
+	    clear:both;
+	}
+
+	/* For IE 6/7 (trigger hasLayout) */
+	.clearfix {
+	    zoom:1;
+	}

@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Henny+Penny|Londrina+Sketch|Jolly+Lodger|Luckiest+Guy' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/visualPatterns.css">
+	</head>
+	<body class="gradient">
+		<div class="presiNav transition">
+			<img src="images/menu.svg" />
+			<ul class="menu transition">
+								<li><a href="index.html" class="">Index</a></li>
+				<li><a href="slides.html" class="">Slide Start</a></li>
+				<li><a href="slidesModular.html" class="">Modular Slides</a></li>
+				<li><a href="slidesCss3.html" class="">CSS3 Slides</a></li>
+			</ul>
+		</div>
+		<div class="pageWrapper">
+			<header>
+				<nav>
+					<a href="conclusions.html">
+						<img src="images/next.svg" />
+					</a>
+				</nav>
+				<div class="inner">
+					<h1>Form Elements and Styles</h1>
+					
+				</div>
+			</header>
+			<div class="contentWrapper splitThirty">
+				<div class="mainContent inner">
+					<hgroup>
+						<h2>Forms in CSS3 &amp; HTML5</h2>
+					</hgroup>
+					<!-- our lovely modular component -->
+					<div class="cB">
+						<div class="inner bordered rounded transparent">
+							<h3 class="hThree">How about a form?</h3>
+							<form>
+								<fieldset>
+									<label>Name</label>
+									<input type="text" placeholder="Who is this?" />
+								</fieldset>
+								<fieldset>
+									<label>Email</label>
+									<input type="email" placeholder="We will not spam you" required />
+								</fieldset>
+								<fieldset>
+									<label>Start Date</label>
+									<input type="date" placeholder="The Unicorn Field" />
+								</fieldset>
+								<fieldset>
+									<label>How many?</label>
+									<input type="number" min="1" max="10" value="1" />
+								</fieldset>
+								<fieldset>
+									<label>Range of coolness</label>
+									<input type="range" min="1" max="10" />
+								</fieldset>
+								<fieldset>
+									<input type="submit" value="join" />
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+					<!-- our lovely modular component -->
+					<div class="cB">
+						<div class="inner  bordered rounded">
+							<h3 class="hThree">CSS3 &amp; HTML5 for forms is partially baked...</h3>
+							<p>The fallback for any non supported input is a text input. So go ahead and use the new fields that work in a few browsers if it makes sense.</p>
+							<ul>
+								<li>Unfortunately, the date picker seems to only work in Opera.</li>
+								<li>I love the range, but it is not quite baked either... how many did I choose? Of course, some scripting can fix this one.</li>
+								<li>Number - the increment is cool. It is keyboard accessible as well.</li>
+								<li>Required is cool. If it gets widespread support (IE9?, Safari?).</li>
+								<li>Email, URL, and Phone are awesome on mobile. They pull up the correct keyboard. Go ahead and use them.</li>
+								<li>Opera 11 supports a color picker... so how many people use Opera 11?</li>
+							</ul>
+							<p>Let's make this one look cool at least.</p>
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+				</div>
+			</div>
+			<footer>
+				<div class="inner">
+					<p>If only my production code were this clean...</p>
+					<p>@patrickclay</p>
+					<p><a href="http://pboggs2006.tumblr.com">pboggs2006.tumblr.com</a><p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

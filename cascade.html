@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/visualPatterns.css">
+	</head>
+	<body class="ocean">
+		<div class="presiNav transition">
+			<img src="images/menu.svg" />
+			<ul class="menu transition">
+								<li><a href="index.html" class="">Index</a></li>
+				<li><a href="slides.html" class="">Slide Start</a></li>
+				<li><a href="slidesModular.html" class="">Modular Slides</a></li>
+				<li><a href="slidesCss3.html" class="">CSS3 Slides</a></li>
+			</ul>
+		</div>
+		<div class="pageWrapper">
+			<header>
+				<nav>
+					<a href="cascade.html">
+						<img src="images/next.svg" />
+					</a>
+				</nav>
+				<div class="inner">
+					<h1>Visual Patterns with Code</h1>
+				</div>
+			</header>
+			<div class="contentWrapper">
+				<div class="mainContent inner">
+					<hgroup>
+						<h2>The trouble with IDs</h2>
+					</hgroup>
+					<!-- our lovely modular component -->
+					<div class="cB bordered">
+						<div class="inner">
+							<h3 class="hThree">Specificity.</h3>
+							<p>You have a list and need to show an alert on one item in the list.</p>							
+							
+<xmp>
+#featured li {color:#369;}
+#featured li.alert {color:red;}
+
+.featured li {color:#369;}
+li.alert {color:red;}
+</xmp>
+
+						<p>#2 is better - you can use it anywhere. In fact...</p>
+<xmp>
+.featured li {color:#369;}
+.alert {color:red !important;}
+</xmp>
+						<p>I know - Somewhere Jeffrey Zeldman and Eric Meyer just got chills. A puppy may have even met it's end.</p>
+						
+						
+						<h3>Real world example from a project I work on</h3>
+						<p>(there are many things to talk about here)</p>
+<xmp>
+#search_results_empty_id p	{font-weight:normal;}
+#search_results_empty_id p.bold	{font-size:18px; font-weight:bold;}
+#search_results_empty_id p #save_search_button 	{margin:0;}	
+
+table.listings th.selected_sort_column div.sort_ascending a {who cares what is here...}
+</xmp>					
+						<h3>There is no cascade left - no planning and 4 years of neglect = no cascade</h3>
+						
+						<h3>Location based styles should be used sparingly.</h3>
+						<p>Look at your site, catalog it. Cut out the UI pieces. Then look for patterns.</p>
+						<p>Code the patterns - semantic HTML.</p>
+						<p>Abstract the CSS - reuse what you can.</p>
+						<p>Use location based CSS to build reusable modular components.</p>
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+
+				
+					
+				</div>
+			</div>
+			<footer>
+				<div class="inner">
+					<p>Cascading Style Sheets... We like the cascade, let's not abuse it.</p>
+					<p>@patrickclay</p>
+					<p><a href="http://pboggs2006.tumblr.com">pboggs2006.tumblr.com</a><p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

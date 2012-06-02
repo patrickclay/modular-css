@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Henny+Penny|Londrina+Sketch|Jolly+Lodger|Luckiest+Guy' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/visualPatterns.css">
+		<style>
+		.panorama	{width:500px; height:400px; overflow:hidden;}
+		.panMe	{position:relative; left:0; -webkit-transition: all 10s linear;
+	    -moz-transition: all 10s linear;
+	    -o-transition: all 10s linear;
+	    -ms-transition: all 10s linear;    
+	    transition: all 10s linear;}
+		.panMe:hover	{left:-1713px;}
+		</style>
+	</head>
+	<body>
+		<div class="presiNav transition">
+			<img src="images/menu.svg" />
+			<ul class="menu transition">
+								<li><a href="index.html" class="">Index</a></li>
+				<li><a href="slides.html" class="">Slide Start</a></li>
+				<li><a href="slidesModular.html" class="">Modular Slides</a></li>
+				<li><a href="slidesCss3.html" class="">CSS3 Slides</a></li>
+			</ul>
+		</div>
+		<div class="pageWrapper">
+			<header>
+				<nav>
+					<a href="cssAnimSample2.html">
+						<img src="images/next.svg" />
+					</a>
+				</nav>
+				<div class="inner">
+					<h1>CSS3 Panorama OR Dramatic camera pan...</h1>
+					
+				</div>
+			</header>
+			<div class="contentWrapper clearfix">
+				<div class="mainContent inner">
+					<div class="halfBox">
+						<div class="panorama">
+							<img src="images/panorama.jpg" alt="Panorama" class="panMe">
+						</div>
+						<p>photo: Nasa</p>
+					</div>
+					<!-- our lovely modular component -->
+					<div class="cB halfBox">
+						<div class="inner bordered">
+<xmp>
+.panorama	{width:500px; height:500px; overflow:hidden;}
+.panMe	{position:relative; left:0; 
+	-webkit-transition: all 10s linear;
+    -moz-transition: all 10s linear;
+    -o-transition: all 10s linear;
+    -ms-transition: all 10s linear;    
+    transition: all 10s linear;}
+
+.panMe:hover	{left:-1713;}	
+</xmp>
+<p><a href="cssAnimSample2.html" title="cssAnimSample2">Something a bit cooler.</a></p>							
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+					
+				</div>
+			</div>
+			<footer>
+				<div class="inner">
+					<p>Hope NASA doesn't sue me for using his photo...</p>
+					<p>@patrickclay</p>
+					<p><a href="http://pboggs2006.tumblr.com">pboggs2006.tumblr.com</a><p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

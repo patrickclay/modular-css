@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/visualPatterns.css">
+	</head>
+	<body>
+		<div class="presiNav transition">
+			<img src="images/menu.svg" />
+			<ul class="menu transition">
+								<li><a href="index.html" class="">Index</a></li>
+				<li><a href="slides.html" class="">Slide Start</a></li>
+				<li><a href="slidesModular.html" class="">Modular Slides</a></li>
+				<li><a href="slidesCss3.html" class="">CSS3 Slides</a></li>
+			</ul>
+		</div>
+		<div class="pageWrapper">
+			<header>
+				<nav>
+					<a href="simpleBox1.html">
+						<img src="images/next.svg" />
+					</a>
+				</nav>
+				<div class="inner">
+					<h1>Start with a content box</h1>
+				</div>
+			</header>
+			<div class="contentWrapper">
+				<div class="mainContent inner">
+					<hgroup>
+						<h2>Today, we build a content box (with an inner box)</h2>
+						<h3>And add modifiers to style it</h3>
+					</hgroup>
+					<!-- our lovely modular component -->
+					<div class="cB bordered">
+						<div class="inner">
+							<h3 class="hThree">Modular CSS / OOCSS / Visual Patterns</h3>
+							<p>Our box will be simple, modular, scalable, modifiable and reusable.</p>
+							<p>The goal is to create reusable chunks of code for repeatable visual patterns.</p>							
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+
+					<!-- our lovely modular component -->
+					<div class="cB">
+						<div class="inner">
+							<h3 class="hThree">The CODE for our box</h3>
+							<xmp>
+	<div class="cB">
+		<div class="inner modifier classes go here">
+			<h3 class="hThree">Component Title or Heading</h3>
+			<p>Component Content</p>
+		</div>
+	</div>
+							</xmp>
+							<p>We could use the article element as well - even better semantics.</p>
+<xmp>
+	<article>
+		<div class="inner modifier classes go here">
+			<h3 class="hThree">Component Title or Heading</h3>
+			<p>Component Content</p>
+		</div>
+	</article>
+</xmp>	
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+					
+					<!-- our lovely modular component -->
+					<div class="cB">
+						<div class="inner modifier classes go here">
+							<h3 class="hThree">And the basic CSS</h3>
+							<xmp>
+.cB	{margin:.5em 0; z-index:1001; position:relative;}
+.inner	{margin:12px;}
+.cB .inner	{padding:8px;}							
+							</xmp>
+						</div>
+					</div>
+					<!-- end of our lovely modular component -->
+					
+				</div>
+			</div>
+			<footer>
+				<div class="inner">
+					<p>I like Sass too, we will get to it...</p>
+					<p>@patrickclay</p>
+					<p><a href="http://pboggs2006.tumblr.com">pboggs2006.tumblr.com</a><p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
